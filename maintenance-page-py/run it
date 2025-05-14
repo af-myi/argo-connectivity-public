@@ -1,0 +1,1 @@
+docker run -p 5000:5000 -e MB_PAGE_TITLE="Maintenance Window" -e MB_HEADLINE="We'll Be Back Soon@(14:00)" -e MB_DESCRIPTION="Our site is down for maintenance. Thanks for your patience." harbor.dev.bare.pandrosion.org/edp-d4a/base/maintenance-base:latest

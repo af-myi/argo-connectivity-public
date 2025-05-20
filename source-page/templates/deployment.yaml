@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: maintenance-base-deployment
+  labels:
+    app: maintenance-base
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: maintenance-base
+  template:
+    metadata:
+      labels:
+        app: maintenance-base
+    spec:
+      containers:
+      - name: maintenance-base
+        image: harbor.bare.pandrosion.org/edp-d4a/base/maintenance-base@sha256:3a57b96acfa89dc8829065d20277b63ac9667a84be5f585af4d2c2f51ffa42c8
+        ports:
+        - containerPort: 80
